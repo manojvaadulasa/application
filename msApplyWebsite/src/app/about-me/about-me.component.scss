@@ -1,0 +1,69 @@
+.post-content {
+  top:200px;
+  left: 108px;
+  position: absolute;
+}
+
+.thumbnail{
+  position:relative;
+  padding-top: 0;
+
+}
+
+.online{
+  border: 2px solid lightskyblue;
+  border-radius: 5px;
+}
+
+h2 {
+  margin: 20px;
+  overflow :hidden;
+  text-align: left;
+  line-height: 1.6em;
+}
+.work {
+  margin: 20px;
+  overflow :hidden;
+  text-align: left;
+  line-height: 1.6em;
+}
+
+.work:before {
+  display: block;
+  float: right;
+  margin-top: 0.8em; /* half the line-height */
+  border-top: 2px solid orangered;
+  width: 72%;
+  content: "";
+}
+
+h2:before {
+  display: block;
+  float: right;
+  margin-top: 0.8em; /* half the line-height */
+  border-top: 2px solid orangered;
+  width: 85%;
+  content: "";
+}
+
+h3 {
+  margin: 25px;
+  overflow :hidden;
+  text-align: left;
+}
+
+.cgpa {
+  margin-left: 135px;
+  overflow :hidden;
+  text-align: left;
+}
+
+.awards {
+  margin-left: 24px;
+  overflow :hidden;
+  text-align: left;
+}
+
+.white {
+  color: azure;
+}

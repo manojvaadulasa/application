@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>CRUD OPERATION</h1>
+  <button class="btn btn-success" type="button" (click)="onAddData()">ADD DATA <i class="bi bi-plus-lg"></i></button>
+  <table class="table table-hover table-bordered border-dark">
+    <thead >
+      <tr class="table-active">
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Address</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of data">
+      <tr >
+        <td>{{item.name}}</td>
+        <td>{{item.gender}}</td>
+        <td>{{item.address}}</td>
+        <td>
+          <button class="btn btn-primary" type="button" (click)="onEditData(item)">EDIT <i class="bi bi-pencil-square"></i></button>&nbsp;
+          <button class="btn btn-danger" (click)="onDeleteData(item)">DELETE <i class="bi bi-trash"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

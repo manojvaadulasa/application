@@ -1,0 +1,23 @@
+.border{
+  border: 1px solid black;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  margin-right: 15%;
+  margin-left: 8%;
+  background-color: lightblue;
+}
+
+h2,h3,h4{
+  text-align: center;
+}
+.containarize {
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
