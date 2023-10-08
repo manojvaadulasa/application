@@ -11,9 +11,10 @@ export class AboutMeComponent {
   primaryTechnicalSkills:string[]=[];
   secondaryTechnicalSkills:string[]=[];
   constructor() {
-    this.careerGoal=`My long-term career aspiration is to become a Software Architect responsible for
-    selecting appropriate frameworks for front-end, back-end, and databases in various projects, ensuring
-    their successful management and maintenance throughout their life cycles.`;
+    this.careerGoal=`My ultimate career goal is to become a Software Architect specializing in framework and
+    database selection across diverse projects, with a particular focus on integrating AI into web
+    technologies given the rapid advancements in the field. I aim to excel in ensuring the seamless
+    management and long-term maintenance of these projects throughout their life cycles.`;
     this.primaryTechnicalSkills=[
       "HTML",
       "CSS",
