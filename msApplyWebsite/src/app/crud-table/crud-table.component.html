@@ -1,25 +1,47 @@
-<div class="container">
-  <h1>CRUD OPERATION</h1>
-  <button class="btn btn-success" type="button" (click)="onAddData()">ADD DATA <i class="bi bi-plus-lg"></i></button>
-  <table class="table table-hover table-bordered border-dark">
-    <thead >
-      <tr class="table-active">
-        <th scope="col">Name</th>
-        <th scope="col">Gender</th>
-        <th scope="col">Address</th>
-        <th scope="col">Actions</th>
-      </tr>
-    </thead>
-    <tbody *ngFor="let item of data">
-      <tr >
-        <td>{{item.name}}</td>
-        <td>{{item.gender}}</td>
-        <td>{{item.address}}</td>
-        <td>
-          <button class="btn btn-primary" type="button" (click)="onEditData(item)">EDIT <i class="bi bi-pencil-square"></i></button>&nbsp;
-          <button class="btn btn-danger" (click)="onDeleteData(item)">DELETE <i class="bi bi-trash"></i></button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<ng-container *ngIf="displayTable === false">
+  <div class="border">
+    <h2>Reason for not Implementing a login/sign-up page in the website</h2>
+    <h4>{{ body }}</h4>
+    <h4>1. Data Transmission Methodology: I employ the HTTP POST method for data transmission when a user submits their registration details. This data is subsequently stored securely in my database.</h4>
+    <h4>2. Response Handling: Upon successful data storage, my application responds with a string that directs the user's browser to the main page, ensuring a smooth transition and user experience.</h4>
+    <h4>3. User Authentication: For user login functionality, when a user initiates a login, my system retrieves a token ID through this method. This token ID serves as a secure identifier linked to the user's account.</h4>
+    <h4>4. User-Specific Pages: The token ID allows the application to ascertain the user's identity. Consequently, I direct them to their respective user-specific page, ensuring privacy and security.</h4>
+    <h2>Reason to demonstarte CRUD operations</h2>
+    <h4>I have chosen to demonstrate a CRUD (Create, Read, Update, Delete) example in order to showcase my proficiency in developing RESTful APIs that encompass essential operations such as GET, POST, PUT, and DELETE. This example serves as a comprehensive representation of my capability to construct complete applications. By highlighting these skills, I aim to convey to the reviewer that I possess the competence to undertake and successfully deliver projects ranging from small to medium-size with my current skill set.</h4>
+  </div>
+  <div class="containarize">
+    <div class="center">
+      <button (click)="displayTableFunction()" class="btn btn-primary">Display Table</button>
+    </div>
+  </div>
+  <div class="white">X</div>
+  <div class="white">X</div>
+  <div class="white">X</div>
+</ng-container>
+<ng-container *ngIf="displayTable === true">
+  <div class="container">
+    <h1>CRUD OPERATION</h1>
+    <button class="btn btn-success" type="button" (click)="onAddData()">ADD DATA <i class="bi bi-plus-lg"></i></button>
+    <table class="table table-hover table-bordered border-dark">
+      <thead >
+        <tr class="table-active">
+          <th scope="col">Name</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Address</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of data">
+        <tr >
+          <td>{{item.name}}</td>
+          <td>{{item.gender}}</td>
+          <td>{{item.address}}</td>
+          <td>
+            <button class="btn btn-primary" type="button" (click)="onEditData(item)">EDIT <i class="bi bi-pencil-square"></i></button>&nbsp;
+            <button class="btn btn-danger" (click)="onDeleteData(item)">DELETE <i class="bi bi-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>

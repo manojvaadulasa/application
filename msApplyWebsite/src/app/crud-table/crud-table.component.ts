@@ -15,7 +15,17 @@ export class CrudTableComponent implements OnInit {
 
   public url : string = environment.URL;
   public data:any;
-  constructor(private http:HttpClient,private dialog:MatDialog){}
+  public displayTable: boolean = false;
+  public body:string='';
+  constructor(private http:HttpClient,private dialog:MatDialog){
+    this.body=`
+    When considering the review process for my website in the context of university applications, it is
+    prudent to ensure a seamless and efficient experience for the reviewers. To facilitate this, I have
+    opted not to implement a login and signup feature directly on my website. However, I do possess a
+    well-established approach for implementing such functionality in other projects, which I would like to
+    share for reference. In my implementation, I adhere to established web development practices:
+    `
+  }
   ngOnInit():void{
     this.onGetData();
   }
@@ -57,6 +67,9 @@ export class CrudTableComponent implements OnInit {
         });
       }
     });
+  }
+  public displayTableFunction(){
+    this.displayTable = true;
   }
 
 }
