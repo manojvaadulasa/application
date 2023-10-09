@@ -5,6 +5,7 @@ import { fullStack } from 'src/app/shared/interfaces/interface';
 import { environment } from 'src/environments/environment';
 import { FormsComponent } from '../forms/forms.component';
 import { MatConfirmDeleteComponent } from '../mat-confirm-delete/mat-confirm-delete.component';
+import { KeepTableService } from '../shared/services/keep-table.service';
 
 @Component({
   selector: 'app-crud-table',
@@ -17,7 +18,7 @@ export class CrudTableComponent implements OnInit {
   public data:any;
   public displayTable: boolean = false;
   public body:string='';
-  constructor(private http:HttpClient,private dialog:MatDialog){
+  constructor(private http:HttpClient,private dialog:MatDialog,private keepTableService : KeepTableService){
     this.body=`
     When considering the review process for my website in the context of university applications, it is
     prudent to ensure a seamless and efficient experience for the reviewers. To facilitate this, I have
@@ -28,6 +29,12 @@ export class CrudTableComponent implements OnInit {
   }
   ngOnInit():void{
     this.onGetData();
+    if(this.keepTableService.getDisplay() === false){
+      this.displayTable=false;
+    }
+    else if(this.keepTableService.getDisplay() === true){
+      this.displayTable=true;
+    }
   }
 
   private onGetData():void{
