@@ -20,7 +20,7 @@ export class CrudTableComponent implements OnInit {
   public body:string='';
   constructor(private http:HttpClient,private dialog:MatDialog,private keepTableService : KeepTableService){
     this.body=`
-    When considering the review process for my website in the context of university applications, it is
+    When considering the review process for my website, it is
     prudent to ensure a seamless and efficient experience for the reviewers. To facilitate this, I have
     opted not to implement a login and signup feature directly on my website. However, I do possess a
     well-established approach for implementing such functionality in other projects, which I would like to
