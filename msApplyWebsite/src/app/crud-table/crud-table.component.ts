@@ -76,6 +76,7 @@ export class CrudTableComponent implements OnInit {
     });
   }
   public displayTableFunction(){
+    this.keepTableService.setDisplay();
     this.displayTable = true;
   }
 
