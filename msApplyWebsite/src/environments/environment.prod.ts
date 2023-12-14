@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  URL: "https://www.manojvfullstackexample.in"
+  URL: "https://manojvfullstackexample-backend.vercel.app"
 };
